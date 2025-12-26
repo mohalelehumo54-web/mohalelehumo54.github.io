@@ -1,2 +1,148 @@
 # mohalelehumo54.github.io
 I don't have a solid purpose besides to good around on here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎄 A Little Christmas Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #0b3d2e, #145a32);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    .tree {
+      font-size: 80px;
+      margin-bottom: 15px;
+      animation: glow 2s infinite alternate;
+    }
+
+    button {
+      background: #e63946;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 25px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #ff4d5a;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px gold; }
+      to { text-shadow: 0 0 20px gold; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- START PAGE -->
+  <div class="card" id="start">
+    <div class="tree">🎄</div>
+    <h1>Merry Christmas, my love 🤍</h1>
+    <p>
+      I made something just for you.<br>
+      It’s small… but it comes from my whole heart.
+    </p>
+    <p><strong>Do you want to see your present?</strong></p>
+    <button onclick="showNo()">No 🙄</button>
+    <button onclick="showYes()">Yes 🥺</button>
+  </div>
+
+  <!-- NO PAGE -->
+  <div class="card hidden" id="noPage">
+    <h1>😔 Really?</h1>
+    <p>
+      Wow… okay that hurt a little.<br>
+      But I promise you, it’s actually good.<br><br>
+      Like… *Christmas magic* good.
+    </p>
+    <button onclick="goBack()">Okay okay, show me 😌</button>
+  </div>
+
+  <!-- YES PAGE / FREESTYLE -->
+  <div class="card hidden" id="yesPage">
+    <h1>🎁 For You, Rose 🤍</h1>
+    <p>
+      This isn’t wrapped in paper,<br>
+      but it’s wrapped in intention.
+    </p>
+    <p>
+      Even when things aren’t perfect,<br>
+      even when days are quiet,<br>
+      my heart still chooses you — easily, naturally, always.
+    </p>
+    <p>
+      You are my favourite person,<br>
+      my answered prayer,<br>
+      and the soft place my heart rests.
+    </p>
+    <p>
+      Christmas reminded me of something simple:<br>
+      And that simple thing was ur presence<br>
+      hope u have a lovely Christmas and I love you, deeply.
+    </p>
+    <p>🎄🤍</p>
+  </div>
+
+  <script>
+    function showNo() {
+      document.getElementById('start').classList.add('hidden');
+      document.getElementById('noPage').classList.remove('hidden');
+    }
+
+    function goBack() {
+      document.getElementById('noPage').classList.add('hidden');
+      document.getElementById('start').classList.remove('hidden');
+    }
+
+    function showYes() {
+      document.getElementById('start').classList.add('hidden');
+      document.getElementById('yesPage').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
